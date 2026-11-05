@@ -2,6 +2,12 @@
 
 # Codexion
 
+**Stack:** C · POSIX threads · mutexes · condition variables · custom priority queue
+
+**Highlights**
+- Dining-philosophers variant with fair resource arbitration (`fifo` or `edf` scheduling)
+- Deadlock prevention (ordered acquisition), starvation prevention (per-resource priority queues), dedicated monitor thread for deadline detection
+
 ## Description
 
 Codexion is a POSIX-threads simulation of a shared co-working hub where several **coders**
