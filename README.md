@@ -1,14 +1,10 @@
-# Pthread Scheduler
+*This activity has been created as part of the 42 curriculum by mde-nas.*
 
-**Stack:** C · POSIX threads · mutexes · condition variables · custom priority queue
-
-**Highlights**
-- Dining-philosophers variant with fair resource arbitration (`fifo` or `edf` scheduling)
-- Deadlock prevention (ordered acquisition), starvation prevention (per-resource priority queues), dedicated monitor thread for deadline detection
+# Codexion
 
 ## Description
 
-A POSIX-threads simulation of a shared co-working hub where several **coders**
+Codexion is a POSIX-threads simulation of a shared co-working hub where several **coders**
 (threads) sit in a circle around a table of **USB dongles**. To compile quantum code, a
 coder must simultaneously hold the dongle on their left and the dongle on their right —
 there is exactly one dongle between each pair of neighboring coders. Once compiling is

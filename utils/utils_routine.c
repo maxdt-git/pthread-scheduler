@@ -6,7 +6,7 @@
 /*   By: mde-nas <maxdenasdetourris@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/03 13:20:46 by mde-nas           #+#    #+#             */
-/*   Updated: 2026/07/06 14:55:41 by mde-nas          ###   ########.fr       */
+/*   Updated: 2026/07/06 09:52:35 by mde-nas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	start_take_dongle(t_coder *coder, t_dongle *dongle)
 	req.coder_id = coder->id;
 	req.order = dongle->next_order++;
 	req.deadline = diff_ms(coder->last_compile_start, coder->env->start)
-	+ env->config.time_to_burnout;
+		+ env->config.time_to_burnout;
 	heap_push(env, dongle, req);
 	pthread_cond_broadcast(&dongle->cond);
 }
@@ -101,7 +101,6 @@ int	take_dongle(t_coder *coder, t_dongle *dongle)
 			return (0);
 		}
 		gettimeofday(&now, NULL);
-		usleep(500000);
 		res = dongle_try_take(coder, dongle, &now);
 		if (res != 0)
 			return (res);

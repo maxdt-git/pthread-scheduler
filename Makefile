@@ -6,7 +6,7 @@
 #    By: mde-nas <maxdenasdetourris@gmail.com>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/01 13:51:11 by mde-nas           #+#    #+#              #
-#    Updated: 2026/07/06 14:50:48 by mde-nas          ###   ########.fr        #
+#    Updated: 2026/07/06 11:47:23 by mde-nas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = codexion
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -pthread
 IFLAGS = -Iheader
-ARGS = 5 5000 300 200 100 2 100 edf
+ARGS = 3 2000 300 200 100 2 100 fifo
 
 SRCS = parse.c main.c utils/utils.c utils/utils_routine.c utils/utils_main.c \
 stop_simu.c routine.c utils/utils_dongles.c scheduler.c
